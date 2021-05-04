@@ -21,9 +21,4 @@ def narcissistic(value):
     value_str = str(value)
     num_of_digits = len(value_str)
     sum_of_powered_digits = sum([int(num) ** num_of_digits for num in value_str])
-
-    if sum_of_powered_digits == value:
-        is_narcissistic = True
-    else:
-        is_narcissistic = False
-    return is_narcissistic
+    return value == sum_of_powered_digits
